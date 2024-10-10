@@ -6,6 +6,7 @@
 */
 
 let randomNumber: number = 0
+let score: number = 0
 
 randomNumber = -1
 basic.clearScreen()
@@ -31,7 +32,13 @@ basic.pause(1000)
 basic.showIcon(IconNames.Happy)
 })
 
-input.buttonIsPressed(Button.A) {
-basic.showString("score" + score)
-
+input.buttonIsPressed(Button.A) 
+{
+basic.showString ("score" + score + 1)
 }
+
+input.onButtonPressed(Button.B, function () {
+basic.showString("score:" + score)
+basic.pause(500)
+basic.showIcon(IconNames.Happy)
+})
